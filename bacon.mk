@@ -315,6 +315,10 @@ PRODUCT_PACKAGES += \
     wcnss_service \
     wificond
 
+# WiFi HAL
+PRODUCT_PACKAGES += \
+    android.hardware.wifi@1.0-service
+
 # Misc dependency packages
 PRODUCT_PACKAGES += \
     ebtables \
