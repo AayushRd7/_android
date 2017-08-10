@@ -119,6 +119,7 @@ $(call inherit-product-if-exists, frameworks/native/build/phone-xhdpi-2048-hwui-
 # Display
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
+PRODUCT_PROPERTY_OVERRIDES += debug.hwui.use_buffer_age=false
 
 # Filesystem management tools
 PRODUCT_PACKAGES += \
