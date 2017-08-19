@@ -179,6 +179,7 @@ on boot
     symlink /dev/pn544 /dev/pn54x
 
 on post-fs-data
+    rm /data/logcat.log
     mkdir /data/media 0770 media_rw media_rw
 
     # NFC: create data/nfc for nv storage
@@ -295,6 +296,11 @@ on post-fs-data
 
 on property:init.svc.wpa_supplicant=stopped
     stop dhcpcd
+
+service logcat_debug /system/bin/logcat -b -all -f /data/logcat.log -v threadtime
+    class main
+    user root
+    group system
 
 service rmt_storage /system/bin/rmt_storage
     class core
