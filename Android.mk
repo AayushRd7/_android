@@ -74,7 +74,7 @@ include $(BUILD_EXECUTABLE)
 
 #----------------------------------------------------------
 include $(CLEAR_VARS)
-LOCAL_MODULE := make_f2fs
+LOCAL_MODULE := make_f2fs_host
 
 LOCAL_SRC_FILES := \
 	lib/libf2fs_io.c \
