@@ -319,7 +319,7 @@ service rfs_access /system/bin/rfs_access
 service qmuxd /system/bin/qmuxd
     class main
     user radio
-    group radio audio bluetooth gps diag qcom_diag
+    group radio audio bluetooth gps diag
 
 service netmgrd /system/bin/netmgrd
     class main
@@ -500,7 +500,7 @@ service config_bluetooth /system/bin/sh /system/etc/init.qcom.bt.sh "onboot"
 service hciattach /system/bin/sh /system/etc/init.qcom.bt.sh
     class late_start
     user bluetooth
-    group bluetooth net_bt_admin qcom_diag diag radio
+    group bluetooth qcom_diag diag radio
     disabled
     oneshot
 
